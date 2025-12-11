@@ -34,10 +34,18 @@ namespace OOP.FinalTerm.Exam.Views
             btnCancel = new Button();
             btnSave = new Button();
             panel3 = new Panel();
-            lblDeleteThisLabel = new Label();
+            label1 = new Label();
+            txtFirstName = new TextBox();
+            txtLastName = new TextBox();
+            label2 = new Label();
+            txtGenres = new TextBox();
+            label3 = new Label();
+            numTotalMovies = new NumericUpDown();
+            label4 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numTotalMovies).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -107,7 +115,14 @@ namespace OOP.FinalTerm.Exam.Views
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(30, 30, 30);
-            panel3.Controls.Add(lblDeleteThisLabel);
+            panel3.Controls.Add(numTotalMovies);
+            panel3.Controls.Add(txtGenres);
+            panel3.Controls.Add(txtLastName);
+            panel3.Controls.Add(txtFirstName);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 50);
             panel3.Name = "panel3";
@@ -115,16 +130,74 @@ namespace OOP.FinalTerm.Exam.Views
             panel3.Size = new Size(500, 360);
             panel3.TabIndex = 2;
             // 
-            // lblDeleteThisLabel
+            // label1
             // 
-            lblDeleteThisLabel.AutoSize = true;
-            lblDeleteThisLabel.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDeleteThisLabel.ForeColor = Color.White;
-            lblDeleteThisLabel.Location = new Point(55, 137);
-            lblDeleteThisLabel.Name = "lblDeleteThisLabel";
-            lblDeleteThisLabel.Size = new Size(386, 32);
-            lblDeleteThisLabel.TabIndex = 1;
-            lblDeleteThisLabel.Text = "Add Controls here [Remove this]";
+            label1.AutoSize = true;
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(42, 34);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 15);
+            label1.TabIndex = 0;
+            label1.Text = "First Name:";
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.Location = new Point(42, 63);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(100, 23);
+            txtFirstName.TabIndex = 1;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Location = new Point(176, 63);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(100, 23);
+            txtLastName.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(176, 34);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Last Name:";
+            // 
+            // txtGenres
+            // 
+            txtGenres.Location = new Point(314, 63);
+            txtGenres.Name = "txtGenres";
+            txtGenres.Size = new Size(100, 23);
+            txtGenres.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(314, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(46, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Genres:";
+            // 
+            // numTotalMovies
+            // 
+            numTotalMovies.Location = new Point(156, 163);
+            numTotalMovies.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numTotalMovies.Name = "numTotalMovies";
+            numTotalMovies.Size = new Size(120, 23);
+            numTotalMovies.TabIndex = 2;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(176, 130);
+            label4.Name = "label4";
+            label4.Size = new Size(76, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Total Movies:";
             // 
             // DirectorForm
             // 
@@ -148,6 +221,7 @@ namespace OOP.FinalTerm.Exam.Views
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numTotalMovies).EndInit();
             ResumeLayout(false);
         }
 
@@ -159,6 +233,13 @@ namespace OOP.FinalTerm.Exam.Views
         private Button btnCancel;
         private Button btnSave;
         private Panel panel3;
-        private Label lblDeleteThisLabel;
+        private NumericUpDown numTotalMovies;
+        private TextBox txtGenres;
+        private TextBox txtLastName;
+        private TextBox txtFirstName;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label label4;
     }
 }
